@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>John Snow's Visualization</title>
+    
+    <link rel="stylesheet" href= "style.css">
+    </head>
+    <body>
+        
+        <h1 class="Jumbo" id="key-visual">John Snow's Visualization</h1>
+        <!--
+        <p>Dr. John Snow's map of the dots from 1855...</p>
+        <img src="snowmap.png" alt="">
+        -->
+        <h1>1st Level</h1>
+        <h2>2nd Level</h2>
+        <h3>3rd Level</h3>
+        <h4>4th Level</h4>
+        <h5>5th Level</h5>
+        <h6>6th Level</h6>
+        
+        <table>
+            <tr>
+                <th style="color: red;">Name</th>
+                <th>Role</th>
+                <th>Image</th>
+            </tr>
+            <tr>
+                <td>Dominik</td>
+                <td>Teacher</td>
+                <td><img src="snowmap.png" alt="" width="50"></td>
+            </tr>
+        </table>
+<br><br><br><br><br>
+        <div>
+            <img src="snowmap.png" alt="" width=200">
+            <p>
+            <b>Dominik</b><br>
+            Teacher
+            </p>
+        </div>
+
+        <div>
+            <div>
+                <span>Text</span>
+                <span>Text</span>
+            </div>
+            <div>
+                <span>Text</span>
+                <span>Text</span>
+            </div>
+        </div>
+
+    </body>  
+</html> 
