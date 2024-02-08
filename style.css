@@ -1,54 +1,174 @@
-<html>
-    <head>
-        <title>John Snow's Visualization</title>
-    
-    <link rel="stylesheet" href= "style.css">
-    </head>
-    <body>
-        
-        <h1 class="Jumbo" id="key-visual">John Snow's Visualization</h1>
-        <!--
-        <p>Dr. John Snow's map of the dots from 1855...</p>
-        <img src="snowmap.png" alt="">
-        -->
-        <h1>1st Level</h1>
-        <h2>2nd Level</h2>
-        <h3>3rd Level</h3>
-        <h4>4th Level</h4>
-        <h5>5th Level</h5>
-        <h6>6th Level</h6>
-        
-        <table>
-            <tr>
-                <th style="color: red;">Name</th>
-                <th>Role</th>
-                <th>Image</th>
-            </tr>
-            <tr>
-                <td>Dominik</td>
-                <td>Teacher</td>
-                <td><img src="snowmap.png" alt="" width="50"></td>
-            </tr>
-        </table>
-<br><br><br><br><br>
-        <div>
-            <img src="snowmap.png" alt="" width=200">
-            <p>
-            <b>Dominik</b><br>
-            Teacher
-            </p>
-        </div>
+body {
+    display: grid;
+    grid-template-areas:
+        'nav nav nav nav nav'
+        ' article article article artcile aside';
+    gap: 10px;
+    background-color: pink;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+}
 
-        <div>
-            <div>
-                <span>Text</span>
-                <span>Text</span>
-            </div>
-            <div>
-                <span>Text</span>
-                <span>Text</span>
-            </div>
-        </div>
+/*default mobile layout */
+.wrapper {
+    display: grid;
+    gap: 20px;
+    grid-template-areas:
+    "header"
+    "nav"
+    "content"
+    "sidebar"
+    "aid"
+    "footer"
+}
 
-    </body>  
-</html> 
+@media (min-width: 500px) {
+    .wrapper {
+        grid-template-columns: 1fr 3fr;
+        grid-template-areas:
+        "header header"
+        "nav    nav"
+        "sidebar content"
+        "ad     footer";
+    }
+}
+
+ @media (min-width: 500px) {
+    .wrapper {
+        grid-template-columns: 1fr 3fr;
+        grid-template-areas:
+        "header header header"
+        "nav    content sidebar"
+        "nav    content ad"
+        "footer footer  footer"
+    }
+ }
+ 
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    }
+}
+
+.main-head {
+    grid-area: header;
+}
+
+.content {
+    grid-area: content;
+}
+
+.main-nav {
+    grid-area: nav;
+}
+
+.side {
+    grid-area: sidebar;
+}
+
+.ad {
+    grid-area: ad;
+}
+
+.main-footer {
+    grid-area: footer;
+}
+
+
+nav {
+    grid-area: nav;
+}
+
+article {
+    grid-area: article;
+    clear:left;
+    line-height: 3em;
+}
+
+article h1 {
+    color: red;
+}
+
+h1.jumbo {
+    font-size: 72px;
+}
+
+h2 {
+    color: white;
+}
+
+h1#key-visual {
+    border: 3px solid white
+}
+
+aside {
+    grid-area: aside;
+    padding: 20px;
+    font-size: 80%;
+}
+
+aside p {
+    font-size: 4rem;
+}
+
+
+
+nav ol#menu li {
+    display: block;
+    float: left;
+    background-color: cornflowerblue;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    font: white;
+    width: 300px;
+    padding: 10px 20px 10px 20px;
+    border-style:ridge;
+    border-color: darkblue;
+    border-width: 3px;
+    margin: 20px;
+    text-align: left;
+}
+
+nav ol#menu li:hover {
+    background-color: grey;
+    }
+
+h1.jumbo {
+    color: red;
+}
+
+
+table {
+    margin: 0;
+    font-size: 36px;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 20px;
+    border: 1px solid black;
+}
+
+td {
+    padding: 20px;
+    border: 5px solid blueviolet
+}
+
+td.first {
+    border-color: green;
+}
+
+tr.first-child td {
+    border-color: green;
+}
+
+tr.first-child td:first-child {
+    border-color: green;
+}
+
+b {
+    display: block;
+}
+
